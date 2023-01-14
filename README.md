@@ -1,2 +1,2 @@
 # JavaDB
-Java Database (Spring Data)
+Java Database SQL und Spring Data.
