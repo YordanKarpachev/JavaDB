@@ -7,7 +7,7 @@ import java.util.Properties;
 
 import static Exercise4JavaDBAppsIntroduction.Constants.*;
 
-enum SqlConnection {
+enum Utils {
     ;
 
     static Connection getSqlConnection() throws SQLException {
@@ -15,6 +15,6 @@ enum SqlConnection {
         properties.setProperty(USER_KEY, USER_VALUE);
         properties.setProperty(PASSWORD_KEY, PASSWORD_VALUE);
 
-        return DriverManager.getConnection(URL_DATABASE);
+        return DriverManager.getConnection(URL_DATABASE, properties);
     }
 }
