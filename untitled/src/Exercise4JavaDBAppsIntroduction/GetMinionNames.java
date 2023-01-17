@@ -39,7 +39,7 @@ public class GetMinionNames {
 
         for (int i = 1; resultSet.next(); i++) {
 
-            System.out.println(i + ". " + resultSet.getString("name") + resultSet.getInt("age"));
+            System.out.println(i + ". " + resultSet.getString("name ") + resultSet.getInt("age"));
         }
     }
 }
