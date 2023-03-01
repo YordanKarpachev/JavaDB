@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90e54f03-b2bf-4cf8-8eb1-4cc815606770" name="Changes" comment="" />
+    <list default="true" id="90e54f03-b2bf-4cf8-8eb1-4cc815606770" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/untitled/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,9 +25,25 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/yorda/Desktop/Softuni/PROJEKT Spring data/JavaDB",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="JavaDB" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="JavaDB" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -35,6 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677714244610</updated>
       <workItem from="1677714245808" duration="11000" />
+      <workItem from="1677714784684" duration="18000" />
     </task>
     <servers />
   </component>
