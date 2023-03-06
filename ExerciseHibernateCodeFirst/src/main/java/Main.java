@@ -10,5 +10,6 @@ public class Main {
 
         codeFirst.getTransaction().commit();
         codeFirst.close();
+        System.out.println();
     }
 }
