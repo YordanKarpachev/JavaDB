@@ -33,19 +33,19 @@ public class WizardDeposits {
     private String depositGroup;
 
 
-    @Column(name = "deposit_start_date")
+    @Column(name = "deposit_start_date",nullable = false)
     private LocalDateTime depositStartDate;
 
-    @Column(name = "deposit_amount")
+    @Column(name = "deposit_amount", nullable = false)
     private float depositAmount;
 
-    @Column(name = "deposit_interest")
+    @Column(name = "deposit_interest",nullable = false)
     private float depositInterest;
 
-    @Column(name = "deposit_charge")
+    @Column(name = "deposit_charge",nullable = false)
     private float depositCharge;
 
-    @Column(name = "deposit_expiration_date")
+    @Column(name = "deposit_expiration_date", nullable = false)
     private LocalDateTime depositExpirationDate;
 
 

@@ -4,35 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e14d442f-5d9b-4e90-864e-631831a1d112" name="Changes" comment="Exercise: Hibernate Code First&#10;;">
-      <change afterPath="$PROJECT_DIR$/src/main/java/A01/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/A01/WizardDeposits.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_dom4j_dom4j_2_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_22_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_jboss_jandex_2_1_3_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/introtohibernate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/introtohibernate.iml" afterDir="false" />
+    <list default="true" id="e14d442f-5d9b-4e90-864e-631831a1d112" name="Changes" comment="    1. Gringotts Database&#10;Your task is to create table wizard_deposits using the Code First approach. The table should contain the following fields:&#10;    • id – Primary Key (number in range [1, 231-1].&#10;    • first_name – Text field with max length of 50 symbols.&#10;    • last_name - Text field with max length of 60 symbols. Required&#10;    • notes – Text field with max length of 1000 symbols&#10;    • age – Required&#10;    • magic_wand_creator – Text field with max length of 100 symbols&#10;    • magic_wand_size – Number in range [1, 215-1]&#10;    • deposit_group - Text field with max length of 20 symbols&#10;    • deposit_start_date – Date and time field&#10;    • deposit_amount – Floating point number field&#10;    • deposit_interest - Floating point number field&#10;    • deposit_charge - Floating point number field&#10;    • deposit_expiration_date – Date and time field&#10;    • is_deposit_expired – Boolean field">
+      <change beforePath="$PROJECT_DIR$/src/main/java/A01/WizardDeposits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/A01/WizardDeposits.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +62,7 @@
       <recent name="A01" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A01.Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="A01.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="A01.Main" />
       <module name="ExerciseHibernateCodeFirst" />
@@ -112,8 +85,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.A01.Main" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.A01.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -127,7 +100,7 @@
       <updated>1678071951588</updated>
       <workItem from="1678071952713" duration="719000" />
       <workItem from="1678072685742" duration="421000" />
-      <workItem from="1678073477552" duration="2502000" />
+      <workItem from="1678073477552" duration="2803000" />
     </task>
     <task id="LOCAL-00001" summary="Exercise: Hibernate Code First">
       <created>1678072524343</created>
@@ -157,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678072799619</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="    1. Gringotts Database&#10;Your task is to create table wizard_deposits using the Code First approach. The table should contain the following fields:&#10;    • id – Primary Key (number in range [1, 231-1].&#10;    • first_name – Text field with max length of 50 symbols.&#10;    • last_name - Text field with max length of 60 symbols. Required&#10;    • notes – Text field with max length of 1000 symbols&#10;    • age – Required&#10;    • magic_wand_creator – Text field with max length of 100 symbols&#10;    • magic_wand_size – Number in range [1, 215-1]&#10;    • deposit_group - Text field with max length of 20 symbols&#10;    • deposit_start_date – Date and time field&#10;    • deposit_amount – Floating point number field&#10;    • deposit_interest - Floating point number field&#10;    • deposit_charge - Floating point number field&#10;    • deposit_expiration_date – Date and time field&#10;    • is_deposit_expired – Boolean field">
+      <created>1678078801064</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678078801064</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +157,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Exercise: Hibernate Code First" />
     <MESSAGE value="Exercise: Hibernate Code First&#10;;)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise: Hibernate Code First&#10;;)" />
+    <MESSAGE value="    1. Gringotts Database&#10;Your task is to create table wizard_deposits using the Code First approach. The table should contain the following fields:&#10;    • id – Primary Key (number in range [1, 231-1].&#10;    • first_name – Text field with max length of 50 symbols.&#10;    • last_name - Text field with max length of 60 symbols. Required&#10;    • notes – Text field with max length of 1000 symbols&#10;    • age – Required&#10;    • magic_wand_creator – Text field with max length of 100 symbols&#10;    • magic_wand_size – Number in range [1, 215-1]&#10;    • deposit_group - Text field with max length of 20 symbols&#10;    • deposit_start_date – Date and time field&#10;    • deposit_amount – Floating point number field&#10;    • deposit_interest - Floating point number field&#10;    • deposit_charge - Floating point number field&#10;    • deposit_expiration_date – Date and time field&#10;    • is_deposit_expired – Boolean field" />
+    <option name="LAST_COMMIT_MESSAGE" value="    1. Gringotts Database&#10;Your task is to create table wizard_deposits using the Code First approach. The table should contain the following fields:&#10;    • id – Primary Key (number in range [1, 231-1].&#10;    • first_name – Text field with max length of 50 symbols.&#10;    • last_name - Text field with max length of 60 symbols. Required&#10;    • notes – Text field with max length of 1000 symbols&#10;    • age – Required&#10;    • magic_wand_creator – Text field with max length of 100 symbols&#10;    • magic_wand_size – Number in range [1, 215-1]&#10;    • deposit_group - Text field with max length of 20 symbols&#10;    • deposit_start_date – Date and time field&#10;    • deposit_amount – Floating point number field&#10;    • deposit_interest - Floating point number field&#10;    • deposit_charge - Floating point number field&#10;    • deposit_expiration_date – Date and time field&#10;    • is_deposit_expired – Boolean field" />
   </component>
 </project>
