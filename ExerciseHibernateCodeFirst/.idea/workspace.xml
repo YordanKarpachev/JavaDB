@@ -4,7 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e14d442f-5d9b-4e90-864e-631831a1d112" name="Changes" comment="Exercise: Hibernate Code First&#10;;)" />
+    <list default="true" id="e14d442f-5d9b-4e90-864e-631831a1d112" name="Changes" comment="Exercise: Hibernate Code First&#10;;">
+      <change afterPath="$PROJECT_DIR$/src/main/java/A01/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/A01/WizardDeposits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_dom4j_dom4j_2_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_22_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_jboss_jandex_2_1_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/introtohibernate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../introtohibernate_ex_skeleton/introtohibernate.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,28 +65,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/yorda/Desktop/Softuni/PROJEKT Spring data/JavaDB/ExerciseHibernateCodeFirst/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yorda/Desktop/Softuni/PROJEKT Spring data/JavaDB/ExerciseHibernateCodeFirst&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\yorda\Desktop\Softuni\PROJEKT Spring data\JavaDB\ExerciseHibernateCodeFirst\src\main\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="A01" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.A01.Main">
+    <configuration name="A01.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="A01.Main" />
+      <module name="ExerciseHibernateCodeFirst" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="A01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ExerciseHibernateCodeFirst" />
@@ -67,6 +112,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A01.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -80,6 +126,8 @@
       <option name="presentableId" value="Default" />
       <updated>1678071951588</updated>
       <workItem from="1678071952713" duration="719000" />
+      <workItem from="1678072685742" duration="421000" />
+      <workItem from="1678073477552" duration="2502000" />
     </task>
     <task id="LOCAL-00001" summary="Exercise: Hibernate Code First">
       <created>1678072524343</created>
@@ -102,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678072614679</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Exercise: Hibernate Code First&#10;;)">
+      <created>1678072799619</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678072799619</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +176,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Exercise: Hibernate Code First" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exercise: Hibernate Code First" />
+    <MESSAGE value="Exercise: Hibernate Code First&#10;;)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise: Hibernate Code First&#10;;)" />
   </component>
 </project>
