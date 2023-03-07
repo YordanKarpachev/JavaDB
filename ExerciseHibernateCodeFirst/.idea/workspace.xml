@@ -5,6 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e14d442f-5d9b-4e90-864e-631831a1d112" name="Changes" comment="    1. Gringotts Database&#10;Your task is to create table wizard_deposits using the Code First approach. The table should contain the following fields:&#10;    • id – Primary Key (number in range [1, 231-1].&#10;    • first_name – Text field with max length of 50 symbols.&#10;    • last_name - Text field with max length of 60 symbols. Required&#10;    • notes – Text field with max length of 1000 symbols&#10;    • age – Required&#10;    • magic_wand_creator – Text field with max length of 100 symbols&#10;    • magic_wand_size – Number in range [1, 215-1]&#10;    • deposit_group - Text field with max length of 20 symbols&#10;    • deposit_start_date – Date and time field&#10;    • deposit_amount – Floating point number field&#10;    • deposit_interest - Floating point number field&#10;    • deposit_charge - Floating point number field&#10;    • deposit_expiration_date – Date and time field&#10;    • is_deposit_expired – Boolean field">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/A02/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/A02/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/A02/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/A02/Sale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/A02/StoreLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/A01/WizardDeposits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/A01/WizardDeposits.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,27 +45,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/yorda/Desktop/Softuni/PROJEKT Spring data/JavaDB/ExerciseHibernateCodeFirst&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/yorda/Desktop/Softuni/PROJEKT Spring data/JavaDB/ExerciseHibernateCodeFirst",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\yorda\Desktop\Softuni\PROJEKT Spring data\JavaDB\ExerciseHibernateCodeFirst\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="A02" />
       <recent name="A01" />
     </key>
   </component>
@@ -100,7 +115,7 @@
       <updated>1678071951588</updated>
       <workItem from="1678071952713" duration="719000" />
       <workItem from="1678072685742" duration="421000" />
-      <workItem from="1678073477552" duration="2803000" />
+      <workItem from="1678073477552" duration="9193000" />
     </task>
     <task id="LOCAL-00001" summary="Exercise: Hibernate Code First">
       <created>1678072524343</created>
@@ -137,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678078801064</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="    1. Gringotts Database&#10;Your task is to create table wizard_deposits using the Code First approach. The table should contain the following fields:&#10;    • id – Primary Key (number in range [1, 231-1].&#10;    • first_name – Text field with max length of 50 symbols.&#10;    • last_name - Text field with max length of 60 symbols. Required&#10;    • notes – Text field with max length of 1000 symbols&#10;    • age – Required&#10;    • magic_wand_creator – Text field with max length of 100 symbols&#10;    • magic_wand_size – Number in range [1, 215-1]&#10;    • deposit_group - Text field with max length of 20 symbols&#10;    • deposit_start_date – Date and time field&#10;    • deposit_amount – Floating point number field&#10;    • deposit_interest - Floating point number field&#10;    • deposit_charge - Floating point number field&#10;    • deposit_expiration_date – Date and time field&#10;    • is_deposit_expired – Boolean field">
+      <created>1678079101808</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678079101808</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

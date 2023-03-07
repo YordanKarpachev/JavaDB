@@ -1,6 +1,7 @@
 package A01;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -37,13 +38,13 @@ public class WizardDeposits {
     private LocalDateTime depositStartDate;
 
     @Column(name = "deposit_amount", nullable = false)
-    private float depositAmount;
+    private BigDecimal depositAmount;
 
     @Column(name = "deposit_interest",nullable = false)
-    private float depositInterest;
+    private BigDecimal depositInterest;
 
     @Column(name = "deposit_charge",nullable = false)
-    private float depositCharge;
+    private BigDecimal depositCharge;
 
     @Column(name = "deposit_expiration_date", nullable = false)
     private LocalDateTime depositExpirationDate;
@@ -128,27 +129,27 @@ public class WizardDeposits {
         this.depositStartDate = depositStartDate;
     }
 
-    public float getDepositAmount() {
+    public BigDecimal getDepositAmount() {
         return depositAmount;
     }
 
-    public void setDepositAmount(float depositAmount) {
+    public void setDepositAmount(BigDecimal depositAmount) {
         this.depositAmount = depositAmount;
     }
 
-    public float getDepositInterest() {
+    public BigDecimal getDepositInterest() {
         return depositInterest;
     }
 
-    public void setDepositInterest(float depositInterest) {
+    public void setDepositInterest(BigDecimal depositInterest) {
         this.depositInterest = depositInterest;
     }
 
-    public float getDepositCharge() {
+    public BigDecimal getDepositCharge() {
         return depositCharge;
     }
 
-    public void setDepositCharge(float depositCharge) {
+    public void setDepositCharge(BigDecimal depositCharge) {
         this.depositCharge = depositCharge;
     }
 
