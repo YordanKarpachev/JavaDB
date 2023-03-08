@@ -19,7 +19,7 @@ public class Student extends Person {
             inverseJoinColumns =
             @JoinColumn(name = "courses_id", referencedColumnName = "id"))
 
-     private Set<Course> courses;
+    private Set<Course> courses;
 
 
     public Student(String firstName, String lastName, String phoneNumber, double averageGrade, int attendance) {
@@ -32,8 +32,6 @@ public class Student extends Person {
         this.averageGrade = averageGrade;
         this.attendance = attendance;
     }
-
-
 
 
     public double getAverageGrade() {
@@ -65,7 +63,7 @@ public class Student extends Person {
         this.courses = courses;
     }
 
-    public Student(){
+    public Student() {
         super();
     }
 }

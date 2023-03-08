@@ -6,7 +6,7 @@ import javax.persistence.*;
 public abstract class Person {
 
     @Id
-     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(name = "first_name", nullable = false)
     protected String firstName;

@@ -20,7 +20,7 @@ public class Course {
     private LocalDate endDate;
     private int credits;
 
-     @ManyToOne
+    @ManyToOne
     private Teacher teacher;
 
     @ManyToMany(mappedBy = "courses")
