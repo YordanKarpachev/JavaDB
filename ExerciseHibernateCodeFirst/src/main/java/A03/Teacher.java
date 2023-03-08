@@ -13,8 +13,8 @@ public class Teacher extends Person {
     @Column(unique = true)
     private String email;
 
-    @Column(name = "salary_per_hour")
-    private double salaryPerHour;
+     @Column(name = "salary_per_hour")
+     private double salaryPerHour;
 
     @OneToMany(mappedBy = "teacher")
     private Set<Course> courses;
