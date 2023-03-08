@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e14d442f-5d9b-4e90-864e-631831a1d112" name="Changes" comment="    1. Gringotts Database&#10;Your task is to create table wizard_deposits using the Code First approach. The table should contain the following fields:&#10;    • id – Primary Key (number in range [1, 231-1].&#10;    • first_name – Text field with max length of 50 symbols.&#10;    • last_name - Text field with max length of 60 symbols. Required&#10;    • notes – Text field with max length of 1000 symbols&#10;    • age – Required&#10;    • magic_wand_creator – Text field with max length of 100 symbols&#10;    • magic_wand_size – Number in range [1, 215-1]&#10;    • deposit_group - Text field with max length of 20 symbols&#10;    • deposit_start_date – Date and time field&#10;    • deposit_amount – Floating point number field&#10;    • deposit_interest - Floating point number field&#10;    • deposit_charge - Floating point number field&#10;    • deposit_expiration_date – Date and time field&#10;    • is_deposit_expired – Boolean field">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/A02/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/A02/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/A02/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/A02/Sale.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/A02/StoreLocation.java" afterDir="false" />
+    <list default="true" id="e14d442f-5d9b-4e90-864e-631831a1d112" name="Changes" comment="Create a database for storing data about sales using the Code First approach. The database should have the following tables:&#10;    • product (id, name, quantity, price)&#10;    • customer (id, name, email, credit_card_number)&#10;    • store_location (id, location_name)&#10;    • sale (id, product_id, customer_id, store_location_id, date)&#10;The relationships between the tables are as follows:&#10;    • Sale has one product and a product can be sold in many sales&#10;    • Sale has one customer and a customer can participate in many sales&#10;    • Sale has one store location and one store location can have many sales&#10;Hint&#10;You can use the following format to design your model classes:&#10;    • Product &#10;        ◦ int id&#10;        ◦ String name &#10;        ◦ Double quantity &#10;        ◦ BigDecimal price &#10;        ◦ Set&lt;Sale&gt; sales&#10;    • Customer &#10;        ◦ int id&#10;        ◦ String name&#10;        ◦ String email&#10;        ◦ String creditCardNumber&#10;        ◦ Set&lt;Sale&gt; sales&#10;    • StoreLocation &#10;        ◦ int id&#10;        ◦ String locationName&#10;        ◦ Set&lt;Sale&gt; sales&#10;    • Sale &#10;        ◦ int id&#10;        ◦ Product product&#10;        ◦ Customer customer&#10;        ◦ StoreLocation storeLocation&#10;        ◦ Date date">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/A03/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/A03/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/A03/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/A03/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/A03/Teacher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/A01/WizardDeposits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/A01/WizardDeposits.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +46,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -73,6 +73,7 @@
       <recent name="C:\Users\yorda\Desktop\Softuni\PROJEKT Spring data\JavaDB\ExerciseHibernateCodeFirst\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="A03" />
       <recent name="A02" />
       <recent name="A01" />
     </key>
@@ -115,7 +116,7 @@
       <updated>1678071951588</updated>
       <workItem from="1678071952713" duration="719000" />
       <workItem from="1678072685742" duration="421000" />
-      <workItem from="1678073477552" duration="9193000" />
+      <workItem from="1678073477552" duration="11922000" />
     </task>
     <task id="LOCAL-00001" summary="Exercise: Hibernate Code First">
       <created>1678072524343</created>
@@ -159,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678079101808</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Create a database for storing data about sales using the Code First approach. The database should have the following tables:&#10;    • product (id, name, quantity, price)&#10;    • customer (id, name, email, credit_card_number)&#10;    • store_location (id, location_name)&#10;    • sale (id, product_id, customer_id, store_location_id, date)&#10;The relationships between the tables are as follows:&#10;    • Sale has one product and a product can be sold in many sales&#10;    • Sale has one customer and a customer can participate in many sales&#10;    • Sale has one store location and one store location can have many sales&#10;Hint&#10;You can use the following format to design your model classes:&#10;    • Product &#10;        ◦ int id&#10;        ◦ String name &#10;        ◦ Double quantity &#10;        ◦ BigDecimal price &#10;        ◦ Set&lt;Sale&gt; sales&#10;    • Customer &#10;        ◦ int id&#10;        ◦ String name&#10;        ◦ String email&#10;        ◦ String creditCardNumber&#10;        ◦ Set&lt;Sale&gt; sales&#10;    • StoreLocation &#10;        ◦ int id&#10;        ◦ String locationName&#10;        ◦ Set&lt;Sale&gt; sales&#10;    • Sale &#10;        ◦ int id&#10;        ◦ Product product&#10;        ◦ Customer customer&#10;        ◦ StoreLocation storeLocation&#10;        ◦ Date date">
+      <created>1678158487004</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678158487004</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +188,7 @@
     <MESSAGE value="Exercise: Hibernate Code First" />
     <MESSAGE value="Exercise: Hibernate Code First&#10;;)" />
     <MESSAGE value="    1. Gringotts Database&#10;Your task is to create table wizard_deposits using the Code First approach. The table should contain the following fields:&#10;    • id – Primary Key (number in range [1, 231-1].&#10;    • first_name – Text field with max length of 50 symbols.&#10;    • last_name - Text field with max length of 60 symbols. Required&#10;    • notes – Text field with max length of 1000 symbols&#10;    • age – Required&#10;    • magic_wand_creator – Text field with max length of 100 symbols&#10;    • magic_wand_size – Number in range [1, 215-1]&#10;    • deposit_group - Text field with max length of 20 symbols&#10;    • deposit_start_date – Date and time field&#10;    • deposit_amount – Floating point number field&#10;    • deposit_interest - Floating point number field&#10;    • deposit_charge - Floating point number field&#10;    • deposit_expiration_date – Date and time field&#10;    • is_deposit_expired – Boolean field" />
-    <option name="LAST_COMMIT_MESSAGE" value="    1. Gringotts Database&#10;Your task is to create table wizard_deposits using the Code First approach. The table should contain the following fields:&#10;    • id – Primary Key (number in range [1, 231-1].&#10;    • first_name – Text field with max length of 50 symbols.&#10;    • last_name - Text field with max length of 60 symbols. Required&#10;    • notes – Text field with max length of 1000 symbols&#10;    • age – Required&#10;    • magic_wand_creator – Text field with max length of 100 symbols&#10;    • magic_wand_size – Number in range [1, 215-1]&#10;    • deposit_group - Text field with max length of 20 symbols&#10;    • deposit_start_date – Date and time field&#10;    • deposit_amount – Floating point number field&#10;    • deposit_interest - Floating point number field&#10;    • deposit_charge - Floating point number field&#10;    • deposit_expiration_date – Date and time field&#10;    • is_deposit_expired – Boolean field" />
+    <MESSAGE value="Create a database for storing data about sales using the Code First approach. The database should have the following tables:&#10;    • product (id, name, quantity, price)&#10;    • customer (id, name, email, credit_card_number)&#10;    • store_location (id, location_name)&#10;    • sale (id, product_id, customer_id, store_location_id, date)&#10;The relationships between the tables are as follows:&#10;    • Sale has one product and a product can be sold in many sales&#10;    • Sale has one customer and a customer can participate in many sales&#10;    • Sale has one store location and one store location can have many sales&#10;Hint&#10;You can use the following format to design your model classes:&#10;    • Product &#10;        ◦ int id&#10;        ◦ String name &#10;        ◦ Double quantity &#10;        ◦ BigDecimal price &#10;        ◦ Set&lt;Sale&gt; sales&#10;    • Customer &#10;        ◦ int id&#10;        ◦ String name&#10;        ◦ String email&#10;        ◦ String creditCardNumber&#10;        ◦ Set&lt;Sale&gt; sales&#10;    • StoreLocation &#10;        ◦ int id&#10;        ◦ String locationName&#10;        ◦ Set&lt;Sale&gt; sales&#10;    • Sale &#10;        ◦ int id&#10;        ◦ Product product&#10;        ◦ Customer customer&#10;        ◦ StoreLocation storeLocation&#10;        ◦ Date date" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create a database for storing data about sales using the Code First approach. The database should have the following tables:&#10;    • product (id, name, quantity, price)&#10;    • customer (id, name, email, credit_card_number)&#10;    • store_location (id, location_name)&#10;    • sale (id, product_id, customer_id, store_location_id, date)&#10;The relationships between the tables are as follows:&#10;    • Sale has one product and a product can be sold in many sales&#10;    • Sale has one customer and a customer can participate in many sales&#10;    • Sale has one store location and one store location can have many sales&#10;Hint&#10;You can use the following format to design your model classes:&#10;    • Product &#10;        ◦ int id&#10;        ◦ String name &#10;        ◦ Double quantity &#10;        ◦ BigDecimal price &#10;        ◦ Set&lt;Sale&gt; sales&#10;    • Customer &#10;        ◦ int id&#10;        ◦ String name&#10;        ◦ String email&#10;        ◦ String creditCardNumber&#10;        ◦ Set&lt;Sale&gt; sales&#10;    • StoreLocation &#10;        ◦ int id&#10;        ◦ String locationName&#10;        ◦ Set&lt;Sale&gt; sales&#10;    • Sale &#10;        ◦ int id&#10;        ◦ Product product&#10;        ◦ Customer customer&#10;        ◦ StoreLocation storeLocation&#10;        ◦ Date date" />
   </component>
 </project>
