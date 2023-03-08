@@ -1,11 +1,10 @@
 package A03;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
-@Table(name = "person")
-@Entity()
+
+@Entity(name = "student")
 public class Student extends Person {
 
     @Column(name = "average_grade")
@@ -14,6 +13,11 @@ public class Student extends Person {
     @Column
     private int attendance;
 
+    @JoinTable(name = "student_id_courses_id", joinColumns =
+    @JoinColumn(name = "student_id", referencedColumnName = "id"),
+            inverseJoinColumns =
+            @JoinColumn(name = "courses_id", referencedColumnName = "id"))
+    private Set<Course> courses;
 
 
     public Student(String firstName, String lastName, String phoneNumber, double averageGrade, int attendance) {
@@ -28,8 +32,8 @@ public class Student extends Person {
     }
 
 
-    public Student(){
-
+    public Student() {
+        super();
     }
 
     public double getAverageGrade() {

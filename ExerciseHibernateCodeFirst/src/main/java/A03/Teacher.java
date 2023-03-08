@@ -4,11 +4,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Table
-@Entity
+
+@Entity(name = "teacher")
 public class Teacher extends Person {
 
-    @Column
+    @Column(unique = true)
     private String email;
 
     @Column(name = "salary_per_hour")
@@ -16,7 +16,7 @@ public class Teacher extends Person {
 
 
     public Teacher() {
-
+    super();
     }
 
     public Teacher(String firstName, String lastName, String phoneNumber, String email, double salaryPerHour) {

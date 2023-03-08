@@ -2,7 +2,7 @@ package A03;
 
 import javax.persistence.*;
 
-@MappedSuperclass()
+@MappedSuperclass
 public abstract class Person {
 
     @Id

@@ -2,9 +2,10 @@ package A03;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Table
-@Entity
+@Entity(name = "courses")
 public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,6 +19,9 @@ public class Course {
     @Column(name = "end_date")
     private LocalDate endDate;
     private int credits;
+
+    @ManyToMany(mappedBy = "courses")
+    private Set<Student> students;
 
     public Course(int id, String name, String description, LocalDate startDate, LocalDate endDate, int credits) {
         this.id = id;
