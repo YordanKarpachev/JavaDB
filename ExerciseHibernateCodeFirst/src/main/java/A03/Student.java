@@ -13,10 +13,12 @@ public class Student extends Person {
     @Column
     private int attendance;
 
+    @ManyToMany
     @JoinTable(name = "student_id_courses_id", joinColumns =
     @JoinColumn(name = "student_id", referencedColumnName = "id"),
             inverseJoinColumns =
             @JoinColumn(name = "courses_id", referencedColumnName = "id"))
+
     private Set<Course> courses;
 
 
@@ -32,9 +34,7 @@ public class Student extends Person {
     }
 
 
-    public Student() {
-        super();
-    }
+
 
     public double getAverageGrade() {
         return averageGrade;
@@ -50,5 +50,22 @@ public class Student extends Person {
 
     public void setAttendance(int attendance) {
         this.attendance = attendance;
+    }
+
+    public Student(String firstName, String lastName, String phoneNumber, double averageGrade, int attendance, Set<Course> courses) {
+        super(firstName, lastName, phoneNumber);
+        this.averageGrade = averageGrade;
+        this.attendance = attendance;
+        this.courses = courses;
+    }
+
+    public Student(double averageGrade, int attendance, Set<Course> courses) {
+        this.averageGrade = averageGrade;
+        this.attendance = attendance;
+        this.courses = courses;
+    }
+
+    public Student(){
+        super();
     }
 }
