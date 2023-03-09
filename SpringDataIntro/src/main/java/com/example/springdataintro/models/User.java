@@ -18,8 +18,8 @@ public class User {
 
     private int age;
 
-    @OneToMany
-    private List<Account> accounts;
+   // @OneToMany
+   // private List<Account> accounts;
 
 
 }
