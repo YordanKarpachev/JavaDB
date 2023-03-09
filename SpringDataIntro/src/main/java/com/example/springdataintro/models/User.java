@@ -19,7 +19,7 @@ public class User {
     private int age;
 
    @OneToMany
-    private List<Account> accounts;
+     private List<Account> accounts;
 
 
 }
