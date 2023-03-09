@@ -2,6 +2,7 @@ package com.example.springdataintro.models;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -18,8 +19,19 @@ public class User {
 
     private int age;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Account> accounts;
+
+    public User() {
+        this.accounts = new ArrayList<>();
+    }
+
+    public User(String username, int age, Account account) {
+        this();
+        this.username = username;
+        this.age = age;
+        this.accounts.add(account);
+    }
 
 
 }
