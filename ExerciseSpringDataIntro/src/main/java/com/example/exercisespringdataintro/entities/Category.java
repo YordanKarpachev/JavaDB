@@ -17,8 +17,24 @@ public class Category {
 
 
     @OneToMany
-    private Set<Books> books;
+    private Set<Book> books;
 
+    public Category(String name) {
+        this.name = name;
+    }
 
+    public Category() {
+    }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Set<Book> getBooks() {
+        return books;
+    }
 }

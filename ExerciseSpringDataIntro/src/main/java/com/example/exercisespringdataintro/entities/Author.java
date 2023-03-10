@@ -18,7 +18,15 @@ public class Author {
     private String lastName;
 
 
-    @OneToMany(targetEntity = Books.class, mappedBy = "id")
-    private Set<Books> books;
+    @OneToMany(targetEntity = Book.class, mappedBy = "id")
+    private Set<Book> books;
 
+
+    public Author(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public Author() {
+    }
 }
