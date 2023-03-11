@@ -96,7 +96,7 @@ public class SeedServiceImpl implements SeedService {
         Author author = authorService.getRandomAuthor();
 
 
-        return new Book(copies, editionType, price, publishDate, ageRestrictionIndex, author);
+        return  new Book(title, copies, editionType, price, publishDate, ageRestrictionIndex, author);
     }
 
 

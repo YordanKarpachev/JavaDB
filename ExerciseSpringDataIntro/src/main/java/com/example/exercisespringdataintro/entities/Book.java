@@ -30,8 +30,11 @@ public class Book {
 
     @ManyToOne
     private Author author;
+    private String title;
 
-    public Book(String description, int copies, EditionTypes editionType, BigDecimal price, LocalDate releaseDate, int ageRestriction, Author author) {
+    public Book(String title,int copies, EditionTypes editionType,BigDecimal price,
+                LocalDate releaseDate, int ageRestriction,Author  author) {
+        this.title = title;
         this.description = description;
         this.copies = copies;
         this.editionType = editionType;
@@ -39,11 +42,13 @@ public class Book {
         this.releaseDate = releaseDate;
         this.ageRestriction = ageRestriction;
         this.author = author;
+
     }
 
 
     public Book() {
     }
+
 
     public int getId() {
         return id;
@@ -102,12 +107,13 @@ public class Book {
         this.author = author;
     }
 
-    public Book(int copies, EditionTypes editionType, BigDecimal price, LocalDate releaseDate, int ageRestriction, Author author) {
-        this.copies = copies;
-        this.editionType = editionType;
-        this.price = price;
-        this.releaseDate = releaseDate;
-        this.ageRestriction = ageRestriction;
-        this.author = author;
+
+
+    public EditionTypes getEditionType() {
+        return editionType;
+    }
+
+    public String getTitle() {
+        return title;
     }
 }
