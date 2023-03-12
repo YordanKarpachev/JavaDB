@@ -37,7 +37,7 @@ public class ConsoleRunner implements CommandLineRunner {
 
     private void printAuthorWithBookBefore1990() {
         LocalDate date = LocalDate.of(1990, 1, 1);
-        List<Author> authors = this.authorRepository.findByBooksReleaseDateBefore(date);
+        List<Author> authors = this.authorRepository.findDistinctByBooksReleaseDateBefore(date);
         authors.forEach(a -> System.out.println(a.getFirstName() + " " + a.getLastName()));
     }
 
