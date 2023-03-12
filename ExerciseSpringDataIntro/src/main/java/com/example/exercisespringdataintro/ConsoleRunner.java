@@ -10,6 +10,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
 
 @Component
@@ -31,14 +32,21 @@ public class ConsoleRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        printAuthorWithBookBefore1990();
+        getAllAuthorsOrderByBooksCountDesc();
 
+    }
+
+    private void getAllAuthorsOrderByBooksCountDesc() {
+      List<Author> authors = this.authorRepository.findAll();
+       authors.stream()
+               .sorted(Comparator.comparingInt(a -> a.getBooks().size()))
+               .forEach(a -> System.out.printf("%s %s -> %d%n", a.getFirstName(), a.getLastName(), a.getBooks().size()));
     }
 
     private void printAuthorWithBookBefore1990() {
         LocalDate date = LocalDate.of(1990, 1, 1);
         List<Author> authors = this.authorRepository.findDistinctByBooksReleaseDateBefore(date);
-        authors.forEach(a -> System.out.println(a.getFirstName() + " " + a.getLastName()));
+        authors.forEach(a -> System.out.printf(a.getFirstName() + " " + a.getLastName()));
     }
 
     private void printAllBooksAfter2000() {

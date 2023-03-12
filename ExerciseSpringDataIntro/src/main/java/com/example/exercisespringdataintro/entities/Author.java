@@ -18,7 +18,7 @@ public class Author {
     private String lastName;
 
 
-    @OneToMany(targetEntity = Book.class, mappedBy = "id")
+    @OneToMany(targetEntity = Book.class, mappedBy = "id", fetch = FetchType.EAGER)
     private Set<Book> books;
 
 
