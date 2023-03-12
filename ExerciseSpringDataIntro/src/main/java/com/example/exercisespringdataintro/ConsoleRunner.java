@@ -39,7 +39,7 @@ public class ConsoleRunner implements CommandLineRunner {
     private void getAllAuthorsOrderByBooksCountDesc() {
       List<Author> authors = this.authorRepository.findAll();
        authors.stream()
-               .sorted(Comparator.comparingInt(a -> a.getBooks().size()))
+               .sorted((a,b) -> b.getBooks().size() - a.getBooks().size())
                .forEach(a -> System.out.printf("%s %s -> %d%n", a.getFirstName(), a.getLastName(), a.getBooks().size()));
     }
 
