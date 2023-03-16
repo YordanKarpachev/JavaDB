@@ -33,7 +33,8 @@ public class Runner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        List<Ingredient> ingredients = this.ingredientService.selectByNamesIn(List.of("Lavender","Herbs", "Apple" ));
-        ingredients.forEach(System.out::println);
+        int count = this.ingredientService.countWithPriceLowerThen(BigDecimal.valueOf(8.5));
+        System.out.println(count);
+     //   ingredients.forEach(System.out::println);
     }
 }

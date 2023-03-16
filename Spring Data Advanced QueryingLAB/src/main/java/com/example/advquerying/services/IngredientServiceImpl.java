@@ -6,6 +6,7 @@ import com.example.advquerying.repositories.IngredientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Service
@@ -26,5 +27,10 @@ public class IngredientServiceImpl  implements  IngredientService{
     @Override
     public List<Ingredient> selectByNamesIn(List<String> lavender) {
         return  this.ingredientRepository.findByNameInOrderByPriceAsc(lavender);
+    }
+
+    @Override
+    public int countWithPriceLowerThen(BigDecimal price) {
+        return this.ingredientRepository.countByPriceLessThan(price);
     }
 }
