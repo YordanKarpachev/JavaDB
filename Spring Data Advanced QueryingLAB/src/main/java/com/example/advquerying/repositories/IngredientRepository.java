@@ -17,4 +17,6 @@ public interface IngredientRepository extends JpaRepository<Ingredient, Long> {
 
     int countByPriceLessThan(BigDecimal price);
 
+    int deleteByName(String name);
+
 }

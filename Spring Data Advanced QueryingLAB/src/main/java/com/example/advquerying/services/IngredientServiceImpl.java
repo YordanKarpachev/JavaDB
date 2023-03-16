@@ -38,6 +38,11 @@ public class IngredientServiceImpl  implements  IngredientService{
         return this.ingredientRepository.countByPriceLessThan(price);
     }
 
+    @Override
+    public int deleteByName(String name) {
+        return this.ingredientRepository.deleteByName(name);
+    }
+
     public  List<Shampoo> selectByIngredientsCount(int count){
         return this.shampooRepository.findByIngredientCountLessThan(count);
     }

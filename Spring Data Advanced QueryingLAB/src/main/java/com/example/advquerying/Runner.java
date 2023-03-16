@@ -10,6 +10,7 @@ import com.example.advquerying.services.ShampooService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -30,9 +31,8 @@ public class Runner implements CommandLineRunner {
     }
 
 
-    @Override
+    @Transactional
     public void run(String... args) throws Exception {
-    this.shampooService.selectByIngredientsCount(2).
-            forEach(System.out::println);
+        this.ingredientService.deleteByName("Nettle");
     }
 }
