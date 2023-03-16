@@ -39,6 +39,6 @@ public class IngredientServiceImpl  implements  IngredientService{
     }
 
     public  List<Shampoo> selectByIngredientsCount(int count){
-        return this.shampooRepository.findByIngredientCountBiggerThan(count);
+        return this.shampooRepository.findByIngredientCountLessThan(count);
     }
 }
