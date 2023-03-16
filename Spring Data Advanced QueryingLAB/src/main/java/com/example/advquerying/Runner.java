@@ -33,6 +33,6 @@ public class Runner implements CommandLineRunner {
 
 
     public void run(String... args) throws Exception {
-        //this.ingredientService.deleteByName("Nettle");
+        this.ingredientService.increasePriceOfAllIngredientsByPercent(0.10);
     }
 }

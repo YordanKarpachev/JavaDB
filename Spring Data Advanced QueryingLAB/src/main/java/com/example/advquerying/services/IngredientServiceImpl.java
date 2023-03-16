@@ -45,6 +45,13 @@ public class IngredientServiceImpl  implements  IngredientService{
         return this.ingredientRepository.deleteByName(name);
     }
 
+    @Override
+    @Transactional
+    public void increasePriceOfAllIngredientsByPercent(double v) {
+        BigDecimal bigDecimal = BigDecimal.valueOf(v);
+        this.ingredientRepository.increasePriceByPercent(bigDecimal);
+    }
+
     public  List<Shampoo> selectByIngredientsCount(int count){
         return this.shampooRepository.findByIngredientCountLessThan(count);
     }

@@ -14,4 +14,7 @@ public interface IngredientService {
     int countWithPriceLowerThen(BigDecimal price);
 
     int deleteByName(String name);
+
+    void increasePriceOfAllIngredientsByPercent(double v);
+
 }

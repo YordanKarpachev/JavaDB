@@ -2,6 +2,9 @@ package com.example.advquerying.repositories;
 
 import com.example.advquerying.entities.Ingredient;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
@@ -19,4 +22,7 @@ public interface IngredientRepository extends JpaRepository<Ingredient, Long> {
 
     int deleteByName(String name);
 
+    @Modifying
+    @Query("update Ingredient i set i.price = i.price + i.price * :multiply")
+    void increasePriceByPercent(@Param("multiply") BigDecimal percent);
 }
