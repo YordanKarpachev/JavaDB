@@ -18,4 +18,10 @@ public class ShampooServiceImpl implements ShampooService {
 
         return this.shampooRepository.findBySize(size);
     }
+
+    @Override
+    public List<Shampoo> selectBySizeOrLabelId(Size size, long labelId) {
+        return this.shampooRepository.findBySizeOrLabelIdOrderByPriceAsc(size, labelId);
+
+    }
 }
