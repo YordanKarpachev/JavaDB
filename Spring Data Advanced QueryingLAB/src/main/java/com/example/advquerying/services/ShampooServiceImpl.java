@@ -27,7 +27,12 @@ public class ShampooServiceImpl implements ShampooService {
     }
 
     @Override
-    public List<Shampoo> selectBySizeGreaterThan(BigDecimal valueOf) {
-        return this.shampooRepository.findByPriceGreaterThanOrderByPriceDesc(valueOf);
+    public List<Shampoo> selectBySizeGreaterThan(int valueOf) {
+        return this.shampooRepository.findByPriceGreaterThanOrderByPriceDesc(BigDecimal.valueOf(valueOf));
+    }
+
+    @Override
+    public List<Shampoo> selectByIngredientsCount(int i) {
+        return this.shampooRepository.findByIngredientCountBiggerThan(i);
     }
 }

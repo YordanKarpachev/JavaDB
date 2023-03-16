@@ -32,9 +32,7 @@ public class Runner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
-        int count = this.ingredientService.countWithPriceLowerThen(BigDecimal.valueOf(8.5));
-        System.out.println(count);
-     //   ingredients.forEach(System.out::println);
+    this.shampooService.selectByIngredientsCount(2).
+            forEach(System.out::println);
     }
 }

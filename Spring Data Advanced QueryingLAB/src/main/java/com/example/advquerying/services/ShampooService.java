@@ -11,5 +11,7 @@ public interface ShampooService {
 
     List<Shampoo> selectBySizeOrLabelId(Size medium, long i);
 
-    List<Shampoo> selectBySizeGreaterThan(BigDecimal valueOf);
+    List<Shampoo> selectBySizeGreaterThan(int valueOf);
+
+    List<Shampoo> selectByIngredientsCount(int i);
 }

@@ -2,7 +2,9 @@ package com.example.advquerying.services;
 
 
 import com.example.advquerying.entities.Ingredient;
+import com.example.advquerying.entities.Shampoo;
 import com.example.advquerying.repositories.IngredientRepository;
+import com.example.advquerying.repositories.ShampooRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +17,10 @@ public class IngredientServiceImpl  implements  IngredientService{
     @Autowired
     private final IngredientRepository ingredientRepository;
 
-    public IngredientServiceImpl(IngredientRepository ingredientRepository) {
+    private final ShampooRepository shampooRepository;
+    public IngredientServiceImpl(IngredientRepository ingredientRepository, ShampooRepository shampooRepository) {
         this.ingredientRepository = ingredientRepository;
+        this.shampooRepository = shampooRepository;
     }
 
     @Override
@@ -32,5 +36,9 @@ public class IngredientServiceImpl  implements  IngredientService{
     @Override
     public int countWithPriceLowerThen(BigDecimal price) {
         return this.ingredientRepository.countByPriceLessThan(price);
+    }
+
+    public  List<Shampoo> selectByIngredientsCount(int count){
+        return this.shampooRepository.findByIngredientCountBiggerThan(count);
     }
 }
