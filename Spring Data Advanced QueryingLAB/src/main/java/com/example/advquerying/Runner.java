@@ -1,8 +1,11 @@
 package com.example.advquerying;
 
+import com.example.advquerying.entities.Ingredient;
 import com.example.advquerying.entities.Shampoo;
-import com.example.advquerying.entities.Size;
+
 import com.example.advquerying.repositories.ShampooRepository;
+
+import com.example.advquerying.services.IngredientService;
 import com.example.advquerying.services.ShampooService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -15,13 +18,14 @@ import java.util.List;
 public class Runner implements CommandLineRunner {
 
 
-    private final ShampooRepository shampooRepository;
-
     private final ShampooService shampooService;
 
+    private final IngredientService ingredientService;
+
     @Autowired
-    public Runner(ShampooRepository shampooRepository, ShampooService shampooService) {
-        this.shampooRepository = shampooRepository;
+
+    public Runner(ShampooRepository shampooRepository, ShampooService shampooService, IngredientService ingredientService) {
+        this.ingredientService = ingredientService;
         this.shampooService = shampooService;
     }
 
@@ -29,7 +33,7 @@ public class Runner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        List<Shampoo> shampoos = this.shampooService.selectBySizeGreaterThan(BigDecimal.valueOf(5));
-        shampoos.forEach(a -> System.out.println(a));
+        List<Ingredient> ingredients = this.ingredientService.selectIngredientStartWithGivenLatter("M");
+        ingredients.forEach(System.out::println);
     }
 }
