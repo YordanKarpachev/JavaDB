@@ -33,7 +33,7 @@ public class Runner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        List<Ingredient> ingredients = this.ingredientService.selectIngredientStartWithGivenLatter("M");
+        List<Ingredient> ingredients = this.ingredientService.selectByNamesIn(List.of("Lavender","Herbs", "Apple" ));
         ingredients.forEach(System.out::println);
     }
 }

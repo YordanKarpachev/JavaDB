@@ -7,4 +7,6 @@ import java.util.List;
 public interface IngredientService {
     List<Ingredient> selectIngredientStartWithGivenLatter(String m
     );
+
+    List<Ingredient> selectByNamesIn(List<String> lavender);
 }

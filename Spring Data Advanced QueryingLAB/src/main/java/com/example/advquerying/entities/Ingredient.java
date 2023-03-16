@@ -45,6 +45,9 @@ public class Ingredient extends BaseEntity {
 
     @Override
     public String toString() {
-        return name;
+        return "Ingredient{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

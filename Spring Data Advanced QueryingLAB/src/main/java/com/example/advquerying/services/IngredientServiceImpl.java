@@ -22,4 +22,9 @@ public class IngredientServiceImpl  implements  IngredientService{
     public List<Ingredient> selectIngredientStartWithGivenLatter(String m) {
         return ingredientRepository.findByNameStartingWith(m);
     }
+
+    @Override
+    public List<Ingredient> selectByNamesIn(List<String> lavender) {
+        return  this.ingredientRepository.findByNameInOrderByPriceAsc(lavender);
+    }
 }
