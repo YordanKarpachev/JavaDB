@@ -31,8 +31,8 @@ public class Runner implements CommandLineRunner {
     }
 
 
-    @Transactional
+
     public void run(String... args) throws Exception {
-        this.ingredientService.deleteByName("Nettle");
+        //this.ingredientService.deleteByName("Nettle");
     }
 }
