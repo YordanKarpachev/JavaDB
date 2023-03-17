@@ -1,6 +1,7 @@
 package com.example.springintro;
 
 import com.example.springintro.model.entity.Book;
+import com.example.springintro.model.entity.EditionType;
 import com.example.springintro.service.AuthorService;
 import com.example.springintro.service.BookService;
 import com.example.springintro.service.CategoryService;
@@ -32,11 +33,10 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
 //        printAllAuthorsNamesWithBooksWithReleaseDateBeforeYear(1990);
         //   printAllAuthorsAndNumberOfTheirBooks();
         //  pritnALlBooksByAuthorNameOrderByReleaseDate("George", "Powell");
-        Scanner scanner = new Scanner(System.in);
-        String ageRestriction = scanner.nextLine();
 
-      this.bookService.printAllTitleBookByAgeRestriction(ageRestriction);
-        System.out.println();
+
+       List<String> titles = this.bookService.titleOFBooksWithEditionTypeLassThanCopies(EditionType.GOLD, 5000);
+       titles.forEach(System.out::println);
     }
 
     private void pritnALlBooksByAuthorNameOrderByReleaseDate(String firstName, String lastName) {

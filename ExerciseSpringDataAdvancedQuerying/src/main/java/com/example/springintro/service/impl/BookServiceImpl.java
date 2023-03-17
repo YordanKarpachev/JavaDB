@@ -86,6 +86,12 @@ public class BookServiceImpl implements BookService {
      this.bookRepository.findByAgeRestriction(restriction).stream().map(Book::getTitle).forEach(System.out::println);
     }
 
+    @Override
+    public List<String> titleOFBooksWithEditionTypeLassThanCopies(EditionType gold, int i) {
+
+        return this.bookRepository.findByEditionTypeAndCopiesLessThan(gold, i).stream().map(Book::getTitle).collect(Collectors.toList());
+    }
+
 
     private Book createBookFromInfo(String[] bookInfo) {
         EditionType editionType = EditionType.values()[Integer.parseInt(bookInfo[0])];
