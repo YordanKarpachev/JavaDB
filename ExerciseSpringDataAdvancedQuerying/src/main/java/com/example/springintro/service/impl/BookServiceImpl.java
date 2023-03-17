@@ -69,7 +69,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<String> findAllBooksByAuthorFirstAndLastNameOrderByReleaseDate(String firstName, String lastName) {
-       return bookRepository
+        return bookRepository
                 .findAllByAuthor_FirstNameAndAuthor_LastNameOrderByReleaseDateDescTitle(firstName, lastName)
                 .stream()
                 .map(book -> String.format("%s %s %d",
@@ -78,6 +78,14 @@ public class BookServiceImpl implements BookService {
                         book.getCopies()))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public void printAllTitleBookByAgeRestriction(String miNor) {
+
+        AgeRestriction restriction = AgeRestriction.valueOf(miNor.toUpperCase());
+     this.bookRepository.findByAgeRestriction(restriction).stream().map(Book::getTitle).forEach(System.out::println);
+    }
+
 
     private Book createBookFromInfo(String[] bookInfo) {
         EditionType editionType = EditionType.values()[Integer.parseInt(bookInfo[0])];

@@ -14,4 +14,6 @@ public interface BookService {
 
     List<String> findAllBooksByAuthorFirstAndLastNameOrderByReleaseDate(String firstName, String lastName);
 
+    void printAllTitleBookByAgeRestriction(String miNor);
+
 }
