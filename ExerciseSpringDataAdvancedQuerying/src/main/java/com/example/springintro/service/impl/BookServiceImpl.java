@@ -126,6 +126,11 @@ public class BookServiceImpl implements BookService {
         return this.bookRepository.findByAuthorLastNameStartingWith(str);
     }
 
+    @Override
+    public int countOfBooksWithTitleLengthThen(int length) {
+        return this.bookRepository.countOfBooksWithLenghtTitleThen(length);
+    }
+
 
     private Book createBookFromInfo(String[] bookInfo) {
         EditionType editionType = EditionType.values()[Integer.parseInt(bookInfo[0])];

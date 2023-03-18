@@ -56,14 +56,14 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
                 .forEach(a -> System.out.printf("%s %s %.2f%n", a.getTitle(), a.getEditionType(), a.getPrice()));  */
 
 
-    /*
+    /*A06
          Write a program that prints the names of those authors, whose first name ends with a given string.
                  this.authorService.findByFirstNameEndingWith("e")
                 .stream().map(a -> a.getFirstName() + " " + a.getLastName())
                 .forEach(System.out::println);    */
 
 
-        /*
+        /*A07
        Write a program that prints the titles of books, which contain a given string (regardless of the casing).
 
         this.bookService.findTitlesWithContaining("sK")
@@ -72,11 +72,23 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
 
 
 
-        /*Write a program that prints the titles of books, which are written by authors, whose last name starts with a given string.
+        /*A08
+
+        Write a program that prints the titles of books, which are written by authors, whose last name starts with a given string.
 
         this.bookService.findBookTitleWithAuthorStartWith("Ric")
 
                 .forEach(a -> System.out.printf("%s (%s %s)%n", a.getTitle(), a.getAuthor().getFirstName(), a.getAuthor().getLastName()));         */
+
+
+
+        /*A09
+        Write a program that prints the number of books, whose title is longer than a given number.
+
+        int length = 12;
+        int count = this.bookService.countOfBooksWithTitleLengthThen(length);
+        System.out.printf("There are %d books with longer title than %d symbols", count, length);
+         */
 
     }
 

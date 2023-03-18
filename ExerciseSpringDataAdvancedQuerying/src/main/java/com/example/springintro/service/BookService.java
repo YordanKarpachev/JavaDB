@@ -29,4 +29,6 @@ public interface BookService {
     List<String> findTitlesWithContaining(String str);
 
     List<Book> findBookTitleWithAuthorStartWith(String str);
+
+    int countOfBooksWithTitleLengthThen(int length);
 }
