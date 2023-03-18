@@ -83,7 +83,7 @@ public class BookServiceImpl implements BookService {
     public void printAllTitleBookByAgeRestriction(String miNor) {
 
         AgeRestriction restriction = AgeRestriction.valueOf(miNor.toUpperCase());
-     this.bookRepository.findByAgeRestriction(restriction).stream().map(Book::getTitle).forEach(System.out::println);
+        this.bookRepository.findByAgeRestriction(restriction).stream().map(Book::getTitle).forEach(System.out::println);
     }
 
     @Override
@@ -96,15 +96,15 @@ public class BookServiceImpl implements BookService {
     public List<Book> printBookNotBetween(int lower, int upper) {
         BigDecimal low = BigDecimal.valueOf(lower);
         BigDecimal high = BigDecimal.valueOf(upper);
-       return this.bookRepository.findByPriceLessThanOrPriceGreaterThan(low, high);
+        return this.bookRepository.findByPriceLessThanOrPriceGreaterThan(low, high);
     }
 
     @Override
     public List<Book> printBooksTitleNotInYear(int year) {
 
-        LocalDate before = LocalDate.of(year, 1 , 1);
+        LocalDate before = LocalDate.of(year, 1, 1);
         LocalDate after = LocalDate.of(year, 12, 31);
-        return  this.bookRepository.findByReleaseDateBeforeOrReleaseDateAfter(before, after);
+        return this.bookRepository.findByReleaseDateBeforeOrReleaseDateAfter(before, after);
     }
 
     @Override
@@ -119,6 +119,11 @@ public class BookServiceImpl implements BookService {
     public List<String> findTitlesWithContaining(String str) {
         return this.bookRepository.findByTitleContaining(str)
                 .stream().map(Book::getTitle).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Book> findBookTitleWithAuthorStartWith(String str) {
+        return this.bookRepository.findByAuthorLastNameStartingWith(str);
     }
 
 

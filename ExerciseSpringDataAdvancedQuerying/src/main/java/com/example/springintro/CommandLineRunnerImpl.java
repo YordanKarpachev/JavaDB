@@ -70,6 +70,14 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
                 .forEach(System.out::println);
                */
 
+
+
+        /*Write a program that prints the titles of books, which are written by authors, whose last name starts with a given string.
+
+        this.bookService.findBookTitleWithAuthorStartWith("Ric")
+
+                .forEach(a -> System.out.printf("%s (%s %s)%n", a.getTitle(), a.getAuthor().getFirstName(), a.getAuthor().getLastName()));         */
+
     }
 
     private void pritnALlBooksByAuthorNameOrderByReleaseDate(String firstName, String lastName) {

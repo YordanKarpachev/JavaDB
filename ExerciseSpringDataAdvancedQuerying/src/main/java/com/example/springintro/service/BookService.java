@@ -27,4 +27,6 @@ public interface BookService {
     List<Book> printBeforeYear(String date);
 
     List<String> findTitlesWithContaining(String str);
+
+    List<Book> findBookTitleWithAuthorStartWith(String str);
 }
