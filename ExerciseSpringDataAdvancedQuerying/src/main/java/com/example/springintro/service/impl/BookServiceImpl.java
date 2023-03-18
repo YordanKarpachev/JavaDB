@@ -14,7 +14,6 @@ import java.nio.file.Path;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
-import java.util.Formatter;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -114,6 +113,12 @@ public class BookServiceImpl implements BookService {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDate localDate = LocalDate.parse(date, dateTimeFormatter);
         return this.bookRepository.findAllByReleaseDateBefore(localDate);
+    }
+
+    @Override
+    public List<String> findTitlesWithContaining(String str) {
+        return this.bookRepository.findByTitleContaining(str)
+                .stream().map(Book::getTitle).collect(Collectors.toList());
     }
 
 
