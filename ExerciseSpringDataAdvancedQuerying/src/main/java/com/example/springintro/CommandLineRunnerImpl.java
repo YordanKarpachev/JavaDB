@@ -56,6 +56,12 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
                 .forEach(a -> System.out.printf("%s %s %.2f%n", a.getTitle(), a.getEditionType(), a.getPrice()));  */
 
 
+
+//Write a program that prints the names of those authors, whose first name ends with a given string.
+                 this.authorService.findByFirstNameEndingWith("e")
+                .stream().map(a -> a.getFirstName() + " " + a.getLastName())
+                .forEach(System.out::println);
+
     }
 
     private void pritnALlBooksByAuthorNameOrderByReleaseDate(String firstName, String lastName) {
