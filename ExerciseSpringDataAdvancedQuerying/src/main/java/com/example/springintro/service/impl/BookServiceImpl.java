@@ -99,6 +99,14 @@ public class BookServiceImpl implements BookService {
        return this.bookRepository.findByPriceLessThanOrPriceGreaterThan(low, high);
     }
 
+    @Override
+    public List<Book> printBooksTitleNotInYear(int year) {
+
+        LocalDate before = LocalDate.of(year, 1 , 1);
+        LocalDate after = LocalDate.of(year, 12, 31);
+        return  this.bookRepository.findByReleaseDateBeforeOrReleaseDateAfter(before, after);
+    }
+
 
     private Book createBookFromInfo(String[] bookInfo) {
         EditionType editionType = EditionType.values()[Integer.parseInt(bookInfo[0])];

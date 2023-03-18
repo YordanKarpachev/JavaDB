@@ -21,4 +21,7 @@ public interface BookService {
 
 
     List<Book> printBookNotBetween(int lower, int upper);
+
+    List<Book> printBooksTitleNotInYear(int year);
+
 }

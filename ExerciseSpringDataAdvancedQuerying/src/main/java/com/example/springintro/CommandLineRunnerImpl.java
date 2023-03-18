@@ -30,18 +30,26 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
         // seedData();
 
 
-        /* Aufgabe 02
+        /* A02
         Write a program that prints the titles of the golden edition books, which have less than 5000 copies.
 
        List<String> titles = this.bookService.titleOFBooksWithEditionTypeLassThanCopies(EditionType.GOLD, 5000);
        titles.forEach(System.out::println); */
 
 
-        //A03     3. Books by Price
+        /*A03     3. Books by Price
         //Write a program that prints the titles and prices of books with price lower than 5 and higher than 40.
-        this.bookService.printBookNotBetween(5, 40)
-                .forEach(a -> System.out.printf("%s - %.2f%n" ,a.getTitle(), a.getPrice() ));
 
+        this.bookService.printBookNotBetween(5, 40)
+                .forEach(a -> System.out.printf("%s - %.2f%n" ,a.getTitle(), a.getPrice() ));  */
+
+
+        /*
+            4. Not Released Books
+        Write a program that prints the titles of all books that are NOT released in a given year.
+
+        this.bookService.printBooksTitleNotInYear(2000)
+                .stream().map(Book::getTitle).forEach(System.out::println); */
 
 
     }
