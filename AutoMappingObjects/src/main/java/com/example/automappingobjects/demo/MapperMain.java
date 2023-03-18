@@ -41,7 +41,7 @@ Create 2 types of data transfer objects – employee data transfer object and ma
     • ManagerDto – first name, last name, list of EmployeeDtos that he/she is in charge of and their count
 Create a list of several employees, then transform it to list of ManagerDtos and print it on the console in the format provided below:
 {ManagerFirstName} {ManagerLastName} | Employees: {EmployeesCount}
-    - {EmployeeFirstName} {EmployeeLastName} {EmployeeSalary}*/
+    - {EmployeeFirstName} {EmployeeLastName} {EmployeeSalary}
         ModelMapper mapper = new ModelMapper();
 
         Address address = new Address("Steindamm", 10 , "Hamburg", "DE");
@@ -57,7 +57,12 @@ Create a list of several employees, then transform it to list of ManagerDtos and
 
         ManagerDTO managerDTO = mapper.map(manager, ManagerDTO.class);
 
-        System.out.println(managerDTO);
+        System.out.println(managerDTO);*/
+
+
+
+
+
 
 
 
