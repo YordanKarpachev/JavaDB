@@ -5,6 +5,7 @@ import com.example.automappingobjects.entities.dto.CustomDTO;
 import com.example.automappingobjects.entities.dto.EmployeeSpringDTO;
 import com.example.automappingobjects.services.EmployeeService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -29,19 +30,23 @@ public class ConsoleRunner implements CommandLineRunner {
 
         //this.persist();
 
-       this.employeeService.findEmployeesBornBefore(1990)
-               .forEach(System.out::println);
+        this.employeeService.findEmployeesBornBefore(1990)
+                .forEach(System.out::println);
 
         List<Employee> all = this.employeeService.findAll();
 
 
         ModelMapper mapper = new ModelMapper();
+        TypeMap<Employee, CustomDTO> employeeToCustom = mapper.createTypeMap(Employee.class, CustomDTO.class);
 
 
-        all.stream()
-                .map(e -> mapper.map(e, CustomDTO.class))
-                .forEach(System.out::println);
 
+
+       // employeeToCustom.<Integer>addMapping(source -> source.getManager().getLastName().length(),
+            //    (destination, value) -> destination.setManagerLastNameLength(value));
+
+         employeeToCustom.addMapping(source -> source.getManager() == null ? 0 : source.getManager().getLastName().length(),
+                 CustomDTO::setManagerLastNameLength);
 
     }
 
