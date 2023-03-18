@@ -92,6 +92,13 @@ public class BookServiceImpl implements BookService {
         return this.bookRepository.findByEditionTypeAndCopiesLessThan(gold, i).stream().map(Book::getTitle).collect(Collectors.toList());
     }
 
+    @Override
+    public List<Book> printBookNotBetween(int lower, int upper) {
+        BigDecimal low = BigDecimal.valueOf(lower);
+        BigDecimal high = BigDecimal.valueOf(upper);
+       return this.bookRepository.findByPriceLessThanOrPriceGreaterThan(low, high);
+    }
+
 
     private Book createBookFromInfo(String[] bookInfo) {
         EditionType editionType = EditionType.values()[Integer.parseInt(bookInfo[0])];

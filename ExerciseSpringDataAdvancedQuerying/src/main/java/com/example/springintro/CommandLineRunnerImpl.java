@@ -29,14 +29,21 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
     public void run(String... args) throws Exception {
         // seedData();
 
-        //printAllBooksAfterYear(2000);
-//        printAllAuthorsNamesWithBooksWithReleaseDateBeforeYear(1990);
-        //   printAllAuthorsAndNumberOfTheirBooks();
-        //  pritnALlBooksByAuthorNameOrderByReleaseDate("George", "Powell");
 
+        /* Aufgabe 02
+        Write a program that prints the titles of the golden edition books, which have less than 5000 copies.
 
        List<String> titles = this.bookService.titleOFBooksWithEditionTypeLassThanCopies(EditionType.GOLD, 5000);
-       titles.forEach(System.out::println);
+       titles.forEach(System.out::println); */
+
+
+        //A03     3. Books by Price
+        //Write a program that prints the titles and prices of books with price lower than 5 and higher than 40.
+        this.bookService.printBookNotBetween(5, 40)
+                .forEach(a -> System.out.printf("%s - %.2f%n" ,a.getTitle(), a.getPrice() ));
+
+
+
     }
 
     private void pritnALlBooksByAuthorNameOrderByReleaseDate(String firstName, String lastName) {

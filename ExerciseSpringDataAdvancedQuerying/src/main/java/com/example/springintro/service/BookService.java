@@ -20,4 +20,5 @@ public interface BookService {
     List<String> titleOFBooksWithEditionTypeLassThanCopies(EditionType gold, int i);
 
 
+    List<Book> printBookNotBetween(int lower, int upper);
 }

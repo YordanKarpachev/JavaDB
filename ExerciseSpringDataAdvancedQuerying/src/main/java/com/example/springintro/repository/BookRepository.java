@@ -6,8 +6,8 @@ import com.example.springintro.model.entity.EditionType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Collection;
 import java.util.List;
 
 @Repository
@@ -24,4 +24,5 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     List<Book> findByEditionTypeAndCopiesLessThan(EditionType gold, int i);
 
 
+    List<Book> findByPriceLessThanOrPriceGreaterThan(BigDecimal low, BigDecimal high);
 }
