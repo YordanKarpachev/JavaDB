@@ -1,7 +1,6 @@
 package com.example.springintro;
 
 import com.example.springintro.model.entity.Book;
-import com.example.springintro.model.entity.EditionType;
 import com.example.springintro.service.AuthorService;
 import com.example.springintro.service.BookService;
 import com.example.springintro.service.CategoryService;
@@ -9,8 +8,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.Scanner;
 
 @Component
 public class CommandLineRunnerImpl implements CommandLineRunner {
@@ -50,6 +47,13 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
 
         this.bookService.printBooksTitleNotInYear(2000)
                 .stream().map(Book::getTitle).forEach(System.out::println); */
+
+
+        /*
+          A05 Write a program that prints the title, the edition type and the price of books, which are released before a given date. The date will be in the format dd-MM-yyyy.
+
+                this.bookService.printBeforeYear("12-04-1992")
+                .forEach(a -> System.out.printf("%s %s %.2f%n", a.getTitle(), a.getEditionType(), a.getPrice()));  */
 
 
     }

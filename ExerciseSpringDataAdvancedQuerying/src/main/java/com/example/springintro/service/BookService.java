@@ -24,4 +24,5 @@ public interface BookService {
 
     List<Book> printBooksTitleNotInYear(int year);
 
+    List<Book> printBeforeYear(String date);
 }
