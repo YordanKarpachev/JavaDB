@@ -10,16 +10,11 @@ public class EmployeeDTO {
 
     private BigDecimal salary;
 
-    private String addressCity;
+
 
     @Override
     public String toString() {
-        return "EmployeeDTO{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", salary=" + salary +
-                ", addressCity='" + addressCity + '\'' +
-                '}';
+        return String.format("%s %s %.2f", this.firstName, this.lastName, this.salary);
     }
 
     public String getFirstName() {
@@ -46,11 +41,5 @@ public class EmployeeDTO {
         this.salary = salary;
     }
 
-    public String getAddressCity() {
-        return addressCity;
-    }
 
-    public void setAddressCity(String addressCity) {
-        this.addressCity = addressCity;
-    }
 }

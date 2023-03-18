@@ -2,6 +2,8 @@ package com.example.automappingobjects.demo.entities;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Employee {
 
@@ -13,12 +15,26 @@ public class Employee {
     private BigDecimal salary;
     private LocalDate birthday;
     private Address address;
-    public Employee(String firstName, String lastName, BigDecimal salary, LocalDate birthday, Address address) {
+
+    private  boolean onVacation;
+
+    private Employee manager;
+
+    private Set<Employee> subordinates;
+
+    public Employee(String firstName, String lastName, BigDecimal salary, LocalDate birthday, Address address, boolean onVacation) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
         this.birthday = birthday;
         this.address = address;
+        this.onVacation = onVacation;
+
+        this.subordinates = new HashSet<>();
+    }
+
+    public void addEmployee(Employee emp){
+        this.subordinates.add(emp);
     }
 
     public String getFirstName() {
@@ -67,5 +83,29 @@ public class Employee {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public boolean isOnVacation() {
+        return onVacation;
+    }
+
+    public void setOnVacation(boolean onVacation) {
+        this.onVacation = onVacation;
+    }
+
+    public Employee getManager() {
+        return manager;
+    }
+
+    public void setManager(Employee manager) {
+        this.manager = manager;
+    }
+
+    public Set<Employee> getSubordinates() {
+        return subordinates;
+    }
+
+    public void setSubordinates(Set<Employee> subordinates) {
+        this.subordinates = subordinates;
     }
 }
