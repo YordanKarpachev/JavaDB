@@ -10,13 +10,13 @@ public class Game {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
+@Column(nullable = false)
     private String title;
 
-    @Column(name = "trailer_id")
+    @Column(name = "trailer_id", nullable = false)
     private String trailerId;
 
-    @Column(name = "image_url")
+    @Column(name = "image_url", nullable = false)
     private String imageUrl;
 
     @Column(nullable = false)
@@ -26,7 +26,7 @@ public class Game {
     private BigDecimal price;
 
     private String description;
-
+@Column(name = "release_date")
    private LocalDate releaseDate;
 
 }
