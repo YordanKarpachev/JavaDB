@@ -1,5 +1,6 @@
-package entities;
+package com.example.exercisespringdataautomappingobjects.entities;
 
+import com.example.exercisespringdataautomappingobjects.entities.users.User;
 import jakarta.persistence.*;
 
 import java.util.Set;
@@ -10,10 +11,10 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @OneToOne
+    @ManyToOne
     private User buyer;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private Set<Game> products;
 
 }

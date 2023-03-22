@@ -1,4 +1,4 @@
-package entities;
+package com.example.exercisespringdataautomappingobjects.entities;
 
 import jakarta.persistence.*;
 
