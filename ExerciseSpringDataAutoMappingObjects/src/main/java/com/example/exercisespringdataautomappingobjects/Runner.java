@@ -1,9 +1,7 @@
 package com.example.exercisespringdataautomappingobjects;
 
 
-import com.example.exercisespringdataautomappingobjects.entities.users.RegisterDTO;
-import com.example.exercisespringdataautomappingobjects.entities.users.User;
-import com.example.exercisespringdataautomappingobjects.services.user.UserService;
+import com.example.exercisespringdataautomappingobjects.services.user.RunnerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -14,17 +12,9 @@ import java.util.Scanner;
 @Component
 public class Runner implements CommandLineRunner {
 
-    private final String registerUserCommand = "RegisterUser";
-    private final String loginUserCommand = "LoginUser";
-
-    private final String logoutUserCommand = "Logout";
-
-    private final UserService UserServiceImpl;
 
     @Autowired
-    public Runner(UserService userServiceImpl) {
-        UserServiceImpl = userServiceImpl;
-    }
+    private RunnerService runnerService;
 
 
     @Override
@@ -32,34 +22,23 @@ public class Runner implements CommandLineRunner {
 
 
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-
-        this.execute(input);
-    }
-
-    private String execute(String input) {
-
-        String[] commandParts = input.split("\\|");
-
-        String command = commandParts[0];
-
-        String commandOutput = switch (command) {
-            case registerUserCommand -> {
-
-                RegisterDTO registerDTO = new RegisterDTO(commandParts);
-                User user = this.UserServiceImpl.register(registerDTO);
 
 
-                yield  String.format("%s was registred", user.getFullName());
-            }
 
-            default ->  "unknown command";
-        };
-        System.out.println(commandOutput);
+        while (true){
+            String input = scanner.nextLine();
+        try {
+            this.runnerService.execute(input);
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
 
-        return commandOutput;
-
-
+        if (input.equals("Logout")){
+            return;
+        }
+        }
 
     }
+
+
 }
