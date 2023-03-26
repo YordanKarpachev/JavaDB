@@ -1,5 +1,6 @@
 package com.example.exercisejsonprocessing.repositories;
 
+import com.example.exercisejsonprocessing.entities.categories.CategoryStatisticDTO;
 import com.example.exercisejsonprocessing.entities.products.Product;
 import com.example.exercisejsonprocessing.entities.products.ProductDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -21,4 +22,9 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
             " order by p.price" )
 
     List<ProductDTO> getAllProductWhichHaveNoBuyerAndPriceBetween(BigDecimal start, BigDecimal end);
+
+
+    @Query("select new com.example.exercisejsonprocessing.entities.categories.CategoryStatisticDTO ( " +
+            "c.name , count(p) , avg(p.price) , sum(p.price)) from products p join p.categories c group by c")
+    List<CategoryStatisticDTO> getCategoryStatistic();
 }

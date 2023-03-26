@@ -1,9 +1,8 @@
 package com.example.exercisejsonprocessing;
 
+import com.example.exercisejsonprocessing.entities.categories.CategoryStatisticDTO;
 import com.example.exercisejsonprocessing.entities.products.ProductDTO;
-import com.example.exercisejsonprocessing.entities.user.User;
 import com.example.exercisejsonprocessing.entities.user.UserWithSoldItemsDTO;
-import com.example.exercisejsonprocessing.repositories.UserRepository;
 import com.example.exercisejsonprocessing.service.ProductService;
 import com.example.exercisejsonprocessing.service.SeedService;
 import com.example.exercisejsonprocessing.service.UserService;
@@ -23,17 +22,20 @@ public class ConsoleRunner implements CommandLineRunner {
     private final ProductService productService;
     private final UserService userService;
 
+
+
    private Gson gson;
 
 
 
     @Autowired
 
-    public ConsoleRunner(SeedService seedService, ProductService productService, UserRepository userRepository, UserService userService) {
+    public ConsoleRunner(SeedService seedService, ProductService productService, UserService userService) {
         this.seedService = seedService;
         this.productService = productService;
 
         this.userService = userService;
+
         gson =   new GsonBuilder().setPrettyPrinting().create();
     }
 
@@ -41,12 +43,20 @@ public class ConsoleRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         //allProductsInRangeWhichHaveNoBuyer();
+       // getAllUsersWIthSOldItems();
+
+        List<CategoryStatisticDTO> categoryStatistic = this.productService.getCategoryStatistic();
+        String s = gson.toJson(categoryStatistic);
+        System.out.println(s);
+
+
+    }
+
+    private void getAllUsersWIthSOldItems() {
         List<UserWithSoldItemsDTO> allUsersWithSoldItemsWithBuyer = this.userService.getAllUsersWithSoldItemsWithBuyer();
         String s = gson.toJson(allUsersWithSoldItemsWithBuyer);
 
         System.out.println(s);
-
-
     }
 
     private void allProductsInRangeWhichHaveNoBuyer() {
