@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 @Entity(name = "users")
+
 public class User {
 
     @Id

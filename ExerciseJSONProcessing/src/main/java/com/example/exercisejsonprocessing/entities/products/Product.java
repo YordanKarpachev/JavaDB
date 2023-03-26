@@ -11,6 +11,7 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity(name = "products")
+
 public class Product {
 
     @Id
@@ -46,7 +47,7 @@ public class Product {
     }
 
     @ManyToOne(targetEntity = User.class)
-  private User seller;
+   private User seller;
 
     public int getId() {
         return id;
