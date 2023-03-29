@@ -1,5 +1,6 @@
 package com.example.xml_ex.service;
 
+import javax.xml.bind.JAXBException;
 import java.io.FileNotFoundException;
 
 public interface SeedService {
@@ -7,9 +8,9 @@ public interface SeedService {
 
     void seedProducts() throws FileNotFoundException;
 
-    void seedCategories() throws FileNotFoundException;
+    void seedCategories() throws FileNotFoundException, JAXBException;
 
-    default void seedAll() throws FileNotFoundException {
+    default void seedAll() throws FileNotFoundException, JAXBException {
         seedUsers();
         seedCategories();
         seedProducts();

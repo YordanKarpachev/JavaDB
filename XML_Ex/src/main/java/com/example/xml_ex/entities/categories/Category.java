@@ -9,7 +9,24 @@ import java.util.Set;
 
 @Entity(name = "categories")
 public class Category {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Column(nullable = false)
+    private String name;
+
+ @ManyToMany(targetEntity = Product.class, mappedBy = "categories")
+    private Set<Product> products;
+
+
+
     public Category() {
+    }
+
+    public Category(String name) {
+        this.name = name;
     }
 
     public int getId() {
@@ -36,15 +53,6 @@ public class Category {
         this.products = products;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Column(nullable = false)
-    private String name;
-
- @ManyToMany(targetEntity = Product.class, mappedBy = "categories")
-    private Set<Product> products;
 
     @Override
     public boolean equals(Object o) {

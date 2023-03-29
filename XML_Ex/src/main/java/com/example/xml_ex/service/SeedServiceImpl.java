@@ -2,6 +2,7 @@ package com.example.xml_ex.service;
 
 
 import com.example.xml_ex.entities.categories.Category;
+import com.example.xml_ex.entities.categories.CategoryImportDTO;
 import com.example.xml_ex.entities.products.Product;
 import com.example.xml_ex.entities.user.User;
 import com.example.xml_ex.repositories.CategoryRepository;
@@ -10,6 +11,9 @@ import com.example.xml_ex.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Arrays;
@@ -30,7 +34,6 @@ public class SeedServiceImpl implements SeedService {
     private UserRepository userRepository;
 
 
-
     private ProductRepository productRepository;
 
     private CategoryRepository categoryRepository;
@@ -43,13 +46,10 @@ public class SeedServiceImpl implements SeedService {
         this.categoryRepository = categoryRepository;
 
 
-
-
     }
 
     @Override
     public void seedUsers() throws FileNotFoundException {
-
 
 
     }
@@ -61,12 +61,23 @@ public class SeedServiceImpl implements SeedService {
     }
 
     @Override
-    public void seedCategories() throws FileNotFoundException {
+    public void seedCategories() throws FileNotFoundException, JAXBException {
+
+        JAXBContext jaxbContext = JAXBContext.newInstance(CategoryImportDTO.class);
+        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+        FileReader fileReader = new FileReader(CATEGORIES_PATH);
+        CategoryImportDTO unmarshal = (CategoryImportDTO) unmarshaller.unmarshal(fileReader);
+
+        List<Category> collect = unmarshal.getCategoryNameDTOS()
+                .stream()
+                .map(a -> new Category(a.getName())).collect(Collectors.toList());
+        this.categoryRepository.saveAll(collect);
+
 
     }
 
     @Override
-    public void seedAll() throws FileNotFoundException {
+    public void seedAll() throws FileNotFoundException, JAXBException {
         SeedService.super.seedAll();
     }
 
@@ -86,7 +97,7 @@ public class SeedServiceImpl implements SeedService {
     private Product setRandomBuyer(Product product) {
 
         int i = new Random().nextInt(10);
-        if(i < 3){
+        if (i < 3) {
             long count = this.userRepository.count();
             int i1 = new Random().nextInt((int) count) + 1;
             Optional<User> byId = this.userRepository.findById(i1);
@@ -106,7 +117,7 @@ public class SeedServiceImpl implements SeedService {
         return product;
     }
 
-    private Optional<User> getRandomUser(){
+    private Optional<User> getRandomUser() {
         long userCount = this.userRepository.count();
         int randomUserId = new Random().nextInt((int) userCount) + 1;
         return this.userRepository.findById(randomUserId);
