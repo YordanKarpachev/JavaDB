@@ -21,11 +21,11 @@ import java.util.stream.Collectors;
 @Service
 public class SeedServiceImpl implements SeedService {
 
-    private final String USER_PATH = "src/main/resources/json_data/users.json";
+    private final String USER_PATH = "src/main/resources/users.xml";
 
-    private final String PRODUCTS_PATH = "src/main/resources/json_data/products.json";
+    private final String PRODUCTS_PATH = "src/main/resources/products.xml";
 
-    private final String CATEGORIES_PATH = "src/main/resources/json_data/categories.json";
+    private final String CATEGORIES_PATH = "src/main/resources/categories.xml";
 
     private UserRepository userRepository;
 
