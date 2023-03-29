@@ -1,6 +1,7 @@
 package com.example.exercisejsonprocessing.service;
 
 import com.example.exercisejsonprocessing.entities.categories.CategoryStatisticDTO;
+import com.example.exercisejsonprocessing.entities.categories.XMLCategoryStatisticDTO;
 import com.example.exercisejsonprocessing.entities.products.Product;
 import com.example.exercisejsonprocessing.entities.products.ProductDTO;
 import com.example.exercisejsonprocessing.repositories.ProductRepository;
@@ -38,5 +39,13 @@ public class ProductServiceImpl implements ProductService {
 
 
       return list;
+    }
+
+    @Override
+    public List<XMLCategoryStatisticDTO> getXMLCategorySt() {
+
+        return  this.productRepository.getXMLCategoryStatistic();
+
+
     }
 }

@@ -1,6 +1,7 @@
 package com.example.exercisejsonprocessing;
 
 import com.example.exercisejsonprocessing.entities.categories.CategoryStatisticDTO;
+import com.example.exercisejsonprocessing.entities.categories.XMLCategoryStatisticDTO;
 import com.example.exercisejsonprocessing.entities.products.ProductDTO;
 import com.example.exercisejsonprocessing.entities.user.UserWithSoldItemsDTO;
 import com.example.exercisejsonprocessing.service.ProductService;
@@ -12,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Marshaller;
 import java.util.List;
 
 @Component
@@ -24,7 +27,7 @@ public class ConsoleRunner implements CommandLineRunner {
 
 
 
-   private Gson gson;
+   private Gson   gson =   new GsonBuilder().setPrettyPrinting().create();
 
 
 
@@ -36,7 +39,7 @@ public class ConsoleRunner implements CommandLineRunner {
 
         this.userService = userService;
 
-        gson =   new GsonBuilder().setPrettyPrinting().create();
+
     }
 
     @Override
@@ -44,12 +47,24 @@ public class ConsoleRunner implements CommandLineRunner {
 
         //allProductsInRangeWhichHaveNoBuyer();
        // getAllUsersWIthSOldItems();
+        // getCategoryStatus();
 
+      //  List<CategoryStatisticDTO> categoryStatistic = this.productService.getCategoryStatistic();
+       // List<XMLCategoryStatisticDTO> xlm =  this.productService.getXMLCategorySt();
+
+       JAXBContext jaxbContext = JAXBContext.newInstance(XMLCategoryStatisticDTO.class);
+       Marshaller marshaller = jaxbContext.createMarshaller();
+        marshaller.marshal(jaxbContext, System.out);
+
+
+        System.out.println();
+
+    }
+
+    private void getCategoryStatus() {
         List<CategoryStatisticDTO> categoryStatistic = this.productService.getCategoryStatistic();
         String s = gson.toJson(categoryStatistic);
         System.out.println(s);
-
-
     }
 
     private void getAllUsersWIthSOldItems() {
