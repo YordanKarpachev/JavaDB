@@ -4,11 +4,13 @@ package com.example.xml_ex.service;
 import com.example.xml_ex.entities.categories.Category;
 import com.example.xml_ex.entities.categories.CategoryImportDTO;
 import com.example.xml_ex.entities.products.Product;
+import com.example.xml_ex.entities.products.ProductsImportDTO;
 import com.example.xml_ex.entities.user.User;
 import com.example.xml_ex.entities.user.UsersImportDTO;
 import com.example.xml_ex.repositories.CategoryRepository;
 import com.example.xml_ex.repositories.ProductRepository;
 import com.example.xml_ex.repositories.UserRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -64,9 +66,18 @@ public class SeedServiceImpl implements SeedService {
     }
 
     @Override
-    public void seedProducts() throws FileNotFoundException {
+    public void seedProducts() throws FileNotFoundException, JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(ProductsImportDTO.class);
+        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+        FileReader fileReader = new FileReader(PRODUCTS_PATH);
+        ProductsImportDTO unmarshal = (ProductsImportDTO) unmarshaller.unmarshal(fileReader);
 
-
+        ModelMapper modelMapper = new ModelMapper();
+        List<Product> collect = unmarshal.getProduct().stream().map(a -> modelMapper.map(a, Product.class))
+                .map(this::setRandomCategories)
+                .map(this::setRandomSeller)
+                .map(this::setRandomBuyer).collect(Collectors.toList());
+        this.productRepository.saveAll(collect);
     }
 
     @Override
