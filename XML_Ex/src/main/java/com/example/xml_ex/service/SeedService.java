@@ -4,7 +4,7 @@ import javax.xml.bind.JAXBException;
 import java.io.FileNotFoundException;
 
 public interface SeedService {
-    void seedUsers() throws FileNotFoundException;
+    void seedUsers() throws FileNotFoundException, JAXBException;
 
     void seedProducts() throws FileNotFoundException;
 

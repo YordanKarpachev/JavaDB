@@ -5,6 +5,7 @@ import com.example.xml_ex.entities.categories.Category;
 import com.example.xml_ex.entities.categories.CategoryImportDTO;
 import com.example.xml_ex.entities.products.Product;
 import com.example.xml_ex.entities.user.User;
+import com.example.xml_ex.entities.user.UsersImportDTO;
 import com.example.xml_ex.repositories.CategoryRepository;
 import com.example.xml_ex.repositories.ProductRepository;
 import com.example.xml_ex.repositories.UserRepository;
@@ -49,7 +50,15 @@ public class SeedServiceImpl implements SeedService {
     }
 
     @Override
-    public void seedUsers() throws FileNotFoundException {
+    public void seedUsers() throws FileNotFoundException, JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(UsersImportDTO.class);
+        FileReader fileReader = new FileReader(USER_PATH);
+        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+        UsersImportDTO unmarshal = (UsersImportDTO) unmarshaller.unmarshal(fileReader);
+
+        List<User> collect = unmarshal.getUser().stream().map(a -> new User(a.getFirstName(), a.getLastName(), a.getAge()))
+                .collect(Collectors.toList());
+        this.userRepository.saveAll(collect);
 
 
     }
