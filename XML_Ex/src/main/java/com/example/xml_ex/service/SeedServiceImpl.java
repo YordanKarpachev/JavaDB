@@ -107,6 +107,7 @@ public class SeedServiceImpl implements SeedService {
 
         for (int j = 0; j < i; j++) {
             Optional<Category> byId = this.categoryRepository.findById(new Random().nextInt((int) countCategories) + 1);
+            Category category = byId.get();
             product.setCategories(byId.get());
 
         }

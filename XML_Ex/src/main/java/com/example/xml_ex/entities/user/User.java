@@ -99,4 +99,13 @@ public class User {
         this.lastName = lastName;
         this.age = age;
     }
+
+
+    public String getFullName(){
+        if(this.getFirstName() == null){
+            return this.getLastName();
+        } else {
+            return this.getFirstName() + " " + this.getLastName();
+        }
+    }
 }

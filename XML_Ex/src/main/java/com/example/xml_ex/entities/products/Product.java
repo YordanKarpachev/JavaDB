@@ -66,6 +66,7 @@ public class Product {
         this();
         this.name = name;
         this.price = price;
+        this.categories = new HashSet<>();
     }
 
     public Set<Category> getCategories() {
@@ -92,9 +93,7 @@ public class Product {
         this.price = price;
     }
 
-    public void setCategories(Set<Category> categories) {
-        this.categories = categories;
-    }
+
 
     public void setCategories(Category categoriy) {
         this.categories.add(categoriy);
@@ -103,6 +102,8 @@ public class Product {
     public void setId(Integer id) {
         this.id = id;
     }
+
+
 
 
 }
