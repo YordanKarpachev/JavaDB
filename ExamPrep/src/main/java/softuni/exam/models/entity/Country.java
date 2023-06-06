@@ -21,6 +21,11 @@ public class Country extends BaseEntity {
         return this;
     }
 
+    public Country() {
+    }
+
+
+
     @Column(nullable = false)
     public String getCurrency() {
         return currency;
