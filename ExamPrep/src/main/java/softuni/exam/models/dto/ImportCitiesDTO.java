@@ -1,12 +1,20 @@
 package softuni.exam.models.dto;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class ImportCitiesDTO {
 
+
+    @Size(min = 2, max = 60)
+    @NotNull
     private String cityName;
 
+    @Min(500)
     private int population;
 
-    private Long countryId;
+    private Long country;
 
     public ImportCitiesDTO() {
     }
@@ -29,10 +37,10 @@ public class ImportCitiesDTO {
     }
 
     public Long getCountryId() {
-        return countryId;
+        return country;
     }
 
     public void setCountryId(Long countryId) {
-        this.countryId = countryId;
+        this.country = countryId;
     }
 }

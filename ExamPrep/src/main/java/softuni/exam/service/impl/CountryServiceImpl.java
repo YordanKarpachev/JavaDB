@@ -6,6 +6,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.ValidationUtils;
 import softuni.exam.models.dto.CountryImportDTO;
+import softuni.exam.models.entity.City;
 import softuni.exam.models.entity.Country;
 import softuni.exam.repository.CountryRepository;
 import softuni.exam.service.CountryService;
@@ -44,6 +45,7 @@ public class CountryServiceImpl implements CountryService {
     public String importCountries() throws IOException {
 
         Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
+        ModelMapper modelMapper = new ModelMapper();
 
         StringBuilder sb = new StringBuilder();
 
@@ -54,13 +56,16 @@ public class CountryServiceImpl implements CountryService {
         for (CountryImportDTO importDTO : countryImportDTO) {
 
             if (this.countryRepository.findFirstByCountryName(importDTO.getCountryName()).isPresent()) {
-
+                sb.append("Invalid country").append(System.lineSeparator());
+                continue;
             }
             boolean empty = validator.validate(importDTO).isEmpty();
             if (!empty) {
                 sb.append("Invalid country").append(System.lineSeparator());
             } else {
                 sb.append(String.format("Successfully imported country %s - %s", importDTO.getCountryName(), importDTO.getCurrency()));
+                Country map = modelMapper.map(importDTO, Country.class);
+                this.countryRepository.save(map);
                 sb.append(System.lineSeparator());
             }
         }
